@@ -41,6 +41,8 @@ where `t` is the frame number and `x_i y_i z_i` are the world coordinates of joi
 Hand joints are organised as follows:
 `[Wrist, TMCP, IMCP, MMCP, RMCP, PMCP, TPIP, TDIP, TTIP, IPIP, IDIP, ITIP, MPIP, MDIP, MTIP, RPIP, RDIP, RTIP, PPIP, PDIP, PTIP]`, where ’T’, ’I’, ’M’, ’R’, ’P’ denote ’Thumb’, ’Index’, ’Middle’, ’Ring’, ’Pinky’ fingers.  
 
+<img src="hand_model.png" alt="hand_model" width="400" class="center"/>
+
 Check out the script `load_example.m` to visualise the hand pose on both color and depth images.
 
 
@@ -53,7 +55,7 @@ Format of each line of object_pose.txt:
 where `Mij` is the element of the transformation matrix `M` at row `i` and column `j`.
 
 ### Object models
-Available objects: 'juice carton', 'milk bottle', 'salt' and 'liquid soap'. Check the folder `object_models`.
+Available objects: 'juice carton', 'milk bottle', 'salt' and 'liquid soap'. Check the folder `Object_models`.
 
 Format [.PLY](https://en.wikipedia.org/wiki/PLY_(file_format)). Each object comes with a texture file `texture.jpg`.
 
