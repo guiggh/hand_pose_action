@@ -1,10 +1,11 @@
 ## First-Person Hand Action Benchmark with RGB-D Videos and 3D Hand Pose Annotations
-This repository contains instructions on getting the data, code and models of the work `First-Person Hand Action Benchmark with RGB-D Videos and 3D Hand Pose Annotations` presented at CVPR 2018 . For more information on the benchmark check out [[1]](#refs).
+This repository contains instructions on getting the data and code of the work `First-Person Hand Action Benchmark with RGB-D Videos and 3D Hand Pose Annotations` presented at CVPR 2018 . For more information on the benchmark check out [[1]](#refs).
 
 ### Downloading the data
 Fill this [form](https://goo.gl/forms/FIsXpYVIUov0j7Wv2) to download the dataset. Please read the [terms and conditions](#terms) first.
 
 ### Dataset structure:
+
 The dataset is organized as the following example:
 
 - File `Video_files/Subject_1/put_salt/1/color/color_0015.jpeg`
@@ -40,6 +41,9 @@ where `t` is the frame number and `x_i y_i z_i` are the world coordinates of joi
 Hand joints are organised as follows:
 `[Wrist, TMCP, IMCP, MMCP, RMCP, PMCP, TPIP, TDIP, TTIP, IPIP, IDIP, ITIP, MPIP, MDIP, MTIP, RPIP, RDIP, RTIP, PPIP, PDIP, PTIP]`, where ’T’, ’I’, ’M’, ’R’, ’P’ denote ’Thumb’, ’Index’, ’Middle’, ’Ring’, ’Pinky’ fingers.  
 
+Check out the script `load_example.m` to visualise the hand pose on both color and depth images.
+
+
 ### Object pose data:
 Available objects: 'juice carton', 'milk bottle', 'salt' and 'liquid soap'.
 Format of each line of object_pose.txt:
@@ -51,7 +55,7 @@ where `Mij` is the element of the transformation matrix `M` at row `i` and colum
 ### Object models
 Available objects: 'juice carton', 'milk bottle', 'salt' and 'liquid soap'. Check the folder `object_models`.
 
-Format [.PLY](https://en.wikipedia.org/wiki/PLY_(file_format)). Each object comes with a texture file.
+Format [.PLY](https://en.wikipedia.org/wiki/PLY_(file_format)). Each object comes with a texture file `texture.jpg`.
 
 Juice carton and milk bottle objects also appear in this popular [6D object pose estimation dataset](http://rkouskou.gitlab.io/research/LCHF.html) and part of the recent [6D ECCV 2018 benchmark](https://arxiv.org/abs/1808.08319). We recaptured the object models attempting to improve the quality. Feel free to use the older [models](http://rkouskou.gitlab.io/research/LCHF.html). Object pose data is annotated for the new models.
 
