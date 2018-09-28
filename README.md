@@ -2,7 +2,7 @@
 This repository contains instructions on getting the data and code of the work `First-Person Hand Action Benchmark with RGB-D Videos and 3D Hand Pose Annotations` presented at CVPR 2018 . For more information on the benchmark check out [[1]](#refs).
 
 ### Downloading the data
-Fill this [form](https://goo.gl/forms/FIsXpYVIUov0j7Wv2) to download the dataset. Please read the [terms and conditions](#terms) first.
+Please fill this [form](https://goo.gl/forms/FIsXpYVIUov0j7Wv2) to download the dataset. Please read the [terms and conditions](#terms) first.
 
 ### Dataset structure:
 
