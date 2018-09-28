@@ -31,7 +31,7 @@ M = [R,t];
 
 % data loading
 folder_frame = ['Video_files/', person_id,'/',action_id,'/',rep,'/'];
-folder_pose =  ['Hand_pose_annotation_v1_1/', person_id,'/',action_id,'/',rep,'/'];
+folder_pose =  ['Hand_pose_annotation_v1/', person_id,'/',action_id,'/',rep,'/'];
 
 hand_pose = textread([folder_pose 'skeleton.txt']);
 hand_pose = hand_pose(:,2:end);
