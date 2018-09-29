@@ -1,8 +1,8 @@
 ## First-Person Hand Action Benchmark with RGB-D Videos and 3D Hand Pose Annotations
-This repository contains instructions on getting the data and code of the work `First-Person Hand Action Benchmark with RGB-D Videos and 3D Hand Pose Annotations` presented at CVPR 2018 . For more information on the benchmark check out [[1]](#refs).
+This repository contains instructions on getting the data and code of the work `First-Person Hand Action Benchmark with RGB-D Videos and 3D Hand Pose Annotations` presented at CVPR 2018. For more information on the benchmark please check out [[1]](#refs).
 
 ### Downloading the data
-Please fill this [form](https://goo.gl/forms/FIsXpYVIUov0j7Wv2) to download the dataset. Please read the [terms and conditions](#terms) first.
+Please fill this [form](https://goo.gl/forms/FIsXpYVIUov0j7Wv2) to download the dataset after reading the [terms and conditions](#terms).
 
 ### Dataset structure:
 
@@ -36,7 +36,7 @@ Note: Check `Subjects_info` folder for details on number of sequences, frames, e
 Format of each line of skeleton.txt:
 `t x_1 y_1 z_1 x_2 y_2 z_2 ... x_21 y_21 z_21`
 
-where `t` is the frame number and `x_i y_i z_i` are the world coordinates of joint `i` at frame `t`.
+where `t` is the frame number and `x_i y_i z_i` are the world coordinates (in mm) of joint `i` at frame `t`.
 
 Hand joints are organised as follows:
 `[Wrist, TMCP, IMCP, MMCP, RMCP, PMCP, TPIP, TDIP, TTIP, IPIP, IDIP, ITIP, MPIP, MDIP, MTIP, RPIP, RDIP, RTIP, PPIP, PDIP, PTIP]`, where ’T’, ’I’, ’M’, ’R’, ’P’ denote ’Thumb’, ’Index’, ’Middle’, ’Ring’, ’Pinky’ fingers.  
@@ -55,19 +55,19 @@ Format of each line of object_pose.txt:
 where `Mij` is the element of the transformation matrix `M` at row `i` and column `j`.
 
 ### Object models
-Available objects: 'juice carton', 'milk bottle', 'salt' and 'liquid soap'. Check the folder `Object_models`.
+Available objects: 'juice carton', 'milk bottle', 'salt' and 'liquid soap'.
 
-Format [.PLY](https://en.wikipedia.org/wiki/PLY_(file_format)). Each object comes with a texture file `texture.jpg`.
+Format [.PLY](https://en.wikipedia.org/wiki/PLY_(file_format)). Each object comes with a texture file `texture.jpg`. Coordinates are in meters (in contrast to mm for hand poses).
 
-Juice carton and milk bottle objects also appear in this popular [6D object pose estimation dataset](http://rkouskou.gitlab.io/research/LCHF.html) and part of the recent [6D ECCV 2018 benchmark](https://arxiv.org/abs/1808.08319). We recaptured the object models attempting to improve the quality. Feel free to use the older [models](http://rkouskou.gitlab.io/research/LCHF.html). Object pose data is annotated for the new models.
+Juice carton and milk bottle objects also appear in this popular [6D object pose estimation dataset](http://rkouskou.gitlab.io/research/LCHF.html) and part of the recent [6D ECCV 2018 benchmark](https://arxiv.org/abs/1808.08319). We recaptured the object models attempting to improve the quality. Feel free to use the older [models](http://rkouskou.gitlab.io/research/LCHF.html), however our object pose data is annotated for the new models.
 
 Comment: The milk bottle model is not exactly the same as the one used when capturing the dataset. The object got lost (campus cleaning services) and when we bought the milk model again the brand had (slightly) changed the bottle design.
 
 ### Camera parameters:
 #### Depth sensor (intrinsics)
 Image center:
-* u0= 315.944855;
-* v0= 245.287079;
+* u0 = 315.944855;
+* v0 = 245.287079;
 
 Focal Length:
 * fx = 475.065948;
@@ -75,8 +75,8 @@ Focal Length:
 
 #### RGB sensor (intrinsics)
 Image center:
-* u0= 935.732544;
-* v0= 540.681030;
+* u0 = 935.732544;
+* v0 = 540.681030;
 
 Focal Length:
 * fx = 1395.749023;
@@ -91,12 +91,13 @@ R = [0.999988496304, -0.00468848412856, 0.000982563360594;
 t = [25.7; 1.22; 3.902; 1];
 
 ### Benchmark tasks 
+In this section we describe the protocols used for the experiments on the paper.
 #### Action recognition
-data_split_action_recognition.txt contains the 1:1 split reported on the paper. These are the files you should use for training and testing if you want to compare with the results reported in the paper.
+data_split_action_recognition.txt contains the 1:1 split reported on the paper. These are the files you should use for training and testing if you want to compare with the results reported.
 
 #### Hand pose estimation
-- Cross subject: training subjects 1, 3, 4. The rest for testing.
-- Cross object:  testing all actions with the following objects 'peanut butter', 'fork', 'milk', 'tea', 'liquid soap', 'spray/flash', 'paper' (including reading letter), 'calculator', 'phone', 'coin', 'card' and 'wine bottle'. The rest for training.
+- Cross subject: training subjects are 1, 3, 4. The rest for test.
+- Cross object:  test scenario includes all actions with the following objects 'peanut butter', 'fork', 'milk', 'tea', 'liquid soap', 'spray/flash', 'paper' (including reading letter), 'calculator', 'phone', 'coin', 'card' and 'wine bottle'. The rest of objects are for training.
 
 ### Terms and conditions
 <a name="terms"></a>
