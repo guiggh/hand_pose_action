@@ -25,7 +25,7 @@ Contains the 6D object pose for the sequence: repetition
 1 of action class "put salt" by subject number 1. 
 
 Comment: Check Figure 3 and 4 of the paper to learn about action categories. We used a slightly different nomenclature for some actions compared to the paper. These are: "dish soap -> liquid soap"; "read paper -> read letter"; "use spray -> use flash". 
-Note: Check `Subjects_info` folder for details on number of sequences, frames, etc. for each subject. 
+Note: Check `Subjects_info` folder for details on number of sequences, frames, etc. for each subject. The following sequences can be ignored (they were not used in the paper): 'Subject_2/close_milk/4', 'Subject_2/put_tea_bag/2' and 'Subject_4/flip_sponge/2'.
 
 ### Image data details
 * Camera: Intel RealSense SR300.
