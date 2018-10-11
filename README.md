@@ -43,8 +43,7 @@ Hand joints are organised as follows:
 
 <img src="hand_model.png" alt="hand_model" width="400" class="center"/>
 
-Check out the script `load_example.m` to visualise the hand pose on both color and depth images.
-
+Check out the scripts `load_example.x` (.py for Python and .m for Matlab) for examples on how to visualise the hand pose on both color and depth images.
 
 ### Object pose data:
 Available objects: 'juice carton', 'milk bottle', 'salt' and 'liquid soap'.
@@ -52,7 +51,9 @@ Format of each line of object_pose.txt:
 
 `t M11 M21 M31 M41 M12 ... Mij... M44`
 
-where `Mij` is the element of the transformation matrix `M` at row `i` and column `j`.
+where `Mij` is the element of the transformation matrix `M` at row `i` and column `j`. 
+
+Check the Python code `load_example.py` to see an example on how to visualise the object model for a given pose on top of the image.
 
 ### Object models
 Available objects: 'juice carton', 'milk bottle', 'salt' and 'liquid soap'.
@@ -114,8 +115,10 @@ If using this dataset, please cite the following paper:
 }
 ```
 
-### Acknowledgment
+### Acknowledgments
 This dataset is part of Imperial College London-Samsung Research project, supported by Samsung Electronics.
+
+Authors thank Gabriel Garcia for object model acquisition and [Yana Hasson](https://github.com/hassony2) for providing Python scripts and feedback on the dataset.
 
 ### References
 <a name="refs"></a>
