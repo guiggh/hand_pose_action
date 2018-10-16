@@ -88,13 +88,13 @@ def _draw2dseg(ax, annot, idx1, idx2, c='r', alpha=1):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--root', help='Path to dataset install')
-    parser.add_argument('--subject', default='Subject_1')
-    parser.add_argument('--action_name', default='open_liquid_soap')
-    parser.add_argument('--seq_idx', default='1')
-    parser.add_argument('--frame_idx', default=0, type=int)
+    parser.add_argument('--root', required=True, help='Path to dataset install')
+    parser.add_argument('--subject', required=True, default='Subject_1')
+    parser.add_argument('--action_name', required=True, default='open_liquid_soap')
+    parser.add_argument('--seq_idx', required=True, default='1')
+    parser.add_argument('--frame_idx', required=True, default=0, type=int)
     parser.add_argument(
-        '--obj', choices=['liquid_soap', 'juice_bottle', 'milk', 'salt'])
+        '--obj', required=True, choices=['liquid_soap', 'juice_bottle', 'milk', 'salt'])
     args = parser.parse_args()
     reorder_idx = np.array([
         0, 1, 6, 7, 8, 2, 9, 10, 11, 3, 12, 13, 14, 4, 15, 16, 17, 5, 18, 19,
