@@ -45,6 +45,8 @@ Hand joints are organised as follows:
 
 Check out the scripts `load_example.x` (.py for Python and .m for Matlab) for examples on how to visualise the hand pose on both color and depth images.
 
+**Updated 20/02/2019**:  We also provide action sequences with normalized hand poses.  Normalization of hand poses is essential to replicate the action recognition results on the paper. It's briefly mentioned on the paper, but if you want to normalize the hand poses you will need to: compute average distance among subjects between joints, normalize the distance between joints to have the same distance on every frame and subject, make the wrist the origin of coordinates for each frame and (optional but helps) align the wrist with one of the axis by rotating the 3D skeleton. 
+
 ### Object pose data:
 Available objects: 'juice carton', 'milk bottle', 'salt' and 'liquid soap'.
 Format of each line of object_pose.txt:
